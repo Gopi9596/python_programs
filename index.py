@@ -1,0 +1,26 @@
+class Tanguturu:
+    def __init__(self, chicken, mutton):
+        self.chicken = chicken
+        self.mutton = mutton
+
+    def show_chicken(self):
+        print(f"Chicken {self.chicken} fry travels to Chirrikurapadu")
+
+
+class Kandukuru(Tanguturu):
+    def show_mutton(self):
+        print(f"Mutton {self.mutton} fry travels to Chirrikurapadu")
+
+
+class Chirrikurapadu(Kandukuru):
+    def __init__(self, chicken, mutton, pappu):
+        super().__init__(chicken, mutton)
+        self.pappu = pappu
+        print(f"All items available: {self.chicken}, {self.mutton}, {self.pappu}")
+
+
+# Create object
+obj = Chirrikurapadu("Chicken Fry", "Mutton Fry", "Pappu")
+
+obj.show_chicken()
+obj.show_mutton()
